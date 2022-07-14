@@ -1,0 +1,55 @@
+.navbar-brand
+{
+	margin-right: 33px !important;
+}
+
+.nav-link
+{
+	padding: 12px !important;
+	background-color: rgb(9, 79, 145);
+	color: #fff !important;
+	border-radius: 7px;
+	margin-right: 12px;
+}
+
+.nav-link:hover
+{
+	padding: 15px;
+	transition: 0.2s;
+	background-color: rgb(3, 215, 243);
+	color: black !important;
+	border-radius: 7px;
+}
+
+#title 
+{
+	font-size: 1.5em !important;
+	font-weight: 500 !important;
+	color: #0022bb !important;
+	text-transform: none !important;
+}
+
+option[selected], ::placeholder
+{
+	font-weight: bold !important;
+}
+
+tr, td, th
+{
+	border: 0 !important;
+}
+
+#headerRow
+{
+	border-bottom: 2px solid #d7dfeb !important; 
+}
+.expenseRow
+{
+	border-bottom: 1px solid #d7dfeb !important;
+}
+
+#totalAmountLabel, #totalAmountValue
+{
+  font-size: 1.08em;
+
+}

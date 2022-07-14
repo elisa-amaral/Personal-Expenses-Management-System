@@ -1,0 +1,4 @@
+localStorage da versão em Inglês está no perfil kungfukatasandebooks@gmail.com do Chrome
+localStorage da versão em PT-BR  está no perfil someone.i.said@gmail.come do Chrome
+
+Se deletar Cookies and Other Site Data terá que preencher de novo (em perfis do Chrome distintos)

@@ -1,0 +1,126 @@
+<html>
+	<head>
+    <meta charset="utf-8" />
+		<title>Personal Expenses Management System</title>
+		
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <script src="back-end.js"></script>
+
+	</head>
+
+  <body onload="getExpensesList()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center mb-5">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="index.html">  
+           <img src="logo.png" width="60" height="60">
+           Personal Expenses
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white font-weight-bold" href="index.html">Add New</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="manage-expenses.html">Manage All</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col">
+          <span id="title">Manage All Expanses</span>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-2">
+          <select class="form-control font-weight-bold text-secondary" id="year">
+            <option selected value="" disabled>Year</option>
+            <option value="2022">2022</option>
+          </select>
+        </div>
+
+        <div class="col-md-2">
+          <select class="form-control font-weight-bold text-secondary" id="month">
+            <option selected value="" disabled>Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+        </div>
+        
+        <div class="col-md-2">
+          <input type="text" class="form-control" placeholder="Day" id="day" />
+        </div>
+
+        <div class="col-md-2">
+          <select class="form-control font-weight-bold text-secondary" id="category">
+            <option selected value="" class="font-weight-bold" disabled>Category</option> 
+            <option value="1">Groceries</option>
+            <option value="2">Hobbies</option>
+            <option value="3">Entertainment</option>
+            <option value="4">Health</option>
+            <option value="5">Transport</option>
+          </select>
+        </div>
+
+        <div class="col-md-2">
+          <input type="text" class="form-control" placeholder="Amount ($)" id="amount" />
+        </div>
+
+        <div class="col-md-2 d-flex justify-content-end">
+          <button type="button" class="btn btn-success font-weight-bold" onclick="filterExpense()">
+            <i class="fas fa-search"></i>&nbsp;&nbsp;Apply Filters
+          </button>
+        </div>
+      </div>
+
+      <div class="row mt-5 mb-5">
+        <div class="col">
+          <table class="table" >
+            <thead>
+              <tr id="headerRow">
+                <th>Date</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+
+            <tbody id="expensesList">
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>	
+</html>
