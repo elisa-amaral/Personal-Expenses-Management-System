@@ -1,7 +1,6 @@
 # Personal Expenses Management System
 
-This project is a personal expenses management system coded JavaScript, HTML, CSS and Bootstrap. Chrome localStorage was used as the database.
-
+This project is a personal expenses management system.
 ## Screenshot 
 
 ![Screenshot](Screenshot.png)
