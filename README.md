@@ -12,6 +12,8 @@ The database was created with Chrome localStorage. The project must be opened on
 
 ## Technology Stack
 
+The project was built with:
+
 + JavaScript
 + Chrome localStorage
 + HTML
